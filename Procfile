@@ -1,0 +1,1 @@
+web: bundle exec ruby criptoteca.rb -p $PORT

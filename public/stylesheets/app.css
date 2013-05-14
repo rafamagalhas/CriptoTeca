@@ -1,0 +1,72 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+dl.tabs dd a:focus{font-weight:bold;color:#2ba6cb;}
+
+html {
+	overflow-y: scroll;
+}
+
+nav {
+	margin-top: 10px;
+	border: 1px solid #ccc;
+	padding: 15px 0;
+}
+
+nav a {
+	margin-left: 30px;
+}
+
+#content {
+	background: #fff url('../images/logo.png') right 65px no-repeat;
+}
+
+h2 {
+	font-weight: lighter;
+	margin: 20px 0;
+	font-size: 48px;
+}
+
+.tabs-content h3 {
+	float: left;
+}
+
+.tabs-content a {
+	margin-top: 23px;
+	float: right;
+}
+
+.tabs-content p {
+	clear: both;
+	margin-top: 25px;
+}
+
+.crypt-form textarea {
+	height: 80px;
+}
+
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+
