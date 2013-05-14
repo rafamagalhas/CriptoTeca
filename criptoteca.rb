@@ -20,7 +20,7 @@ get '/:algorithm/encrypt/:message' do |algorithm, message|
 end
 
 # Post form routes
-["md5", "sha1", "sha128", "sha256", "sha384", "sha512", "base64"].each do |algorithm|
+["md5", "sha1", "sha256", "sha384", "sha512", "base64"].each do |algorithm|
   post "/#{algorithm}/encrypt/*" do
     redirect "/#{algorithm}/encrypt/#{params["#{algorithm}_encryption"]["message"]}"
   end

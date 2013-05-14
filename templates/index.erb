@@ -7,7 +7,6 @@
 <dl class="tabs">
   <dd class="<%= value_for(@algorithm, "md5")    %>"><a href="#md5">MD5</a></dd>
   <dd class="<%= value_for(@algorithm, "sha1")   %>"><a href="#sha1">SHA1</a></dd>
-  <dd class="<%= value_for(@algorithm, "sha128") %>"><a href="#sha128">SHA128</a></dd>
   <dd class="<%= value_for(@algorithm, "sha256") %>"><a href="#sha256">SHA256</a></dd>
   <dd class="<%= value_for(@algorithm, "sha384") %>"><a href="#sha384">SHA384</a></dd>
   <dd class="<%= value_for(@algorithm, "sha512") %>"><a href="#sha512">SHA512</a></dd>
@@ -31,15 +30,6 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
     <%= partial(:form, :locals => { :algorithm => "sha1" }) %>
-  </li>
-
-  <li class="<%= value_for(@algorithm, "sha128") %>" id="sha128Tab">
-    <h3>Algoritmo de criptografia SHA128</h3>
-    <a href="#">Mais informações</a>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-    <%= partial(:form, :locals => { :algorithm => "sha128" }) %>
   </li>
 
   <li class="<%= value_for(@algorithm, "sha256") %>" id="sha256Tab">

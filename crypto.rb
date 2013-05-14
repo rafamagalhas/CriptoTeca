@@ -14,7 +14,6 @@ class Crypto
     return case type
       when "md5" then Digest::MD5.hexdigest message
       when "sha1" then Digest::SHA1.hexdigest message
-      when "sha128" then Digest::MD5.hexdigest message
       when "sha256" then (Digest::SHA256.new << message).hexdigest
       when "sha384" then (Digest::SHA384.new << message).hexdigest
       when "sha512" then (Digest::SHA512.new << message).hexdigest
