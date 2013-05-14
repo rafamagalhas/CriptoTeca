@@ -24,7 +24,20 @@ end
   end
 end
 
-# Defaut route
+# Other routes
+get '/how-to-use' do
+  erb :how_to_use
+end
+
+get '/colaborate' do
+  erb :colaborate
+end
+
+get '/about' do
+  erb :about
+end
+
+# Default route
 get '/' do
   @algorithm = "md5"
   erb :index
