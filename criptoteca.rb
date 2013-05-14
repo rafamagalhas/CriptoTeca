@@ -3,8 +3,10 @@
 require File.expand_path('crypto.rb')
 require 'rubygems'
 require 'sinatra'
+require 'sinatra/partial'
 
 set :views, File.dirname(__FILE__) + '/templates'
+set :partial_template_engine, :erb
 
 # Encryptation route
 get '/:algorithm/encrypt/:message' do |algorithm, message|

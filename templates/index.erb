@@ -21,19 +21,7 @@
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     
-    <hr />
-    <div class="row crypt-form">
-      <form accept-charset="UTF-8" action="/md5/encrypt/" id="md5_encryption" method="post" class="six columns">
-        <label for="md5_encryption_message">Mensagem a ser criptografada</label>
-        <input type="text" value="<%= value_for(@algorithm, "md5", @message) %>" id="md5_encryption_message" name="md5_encryption[message]" />
-        <input type="submit" value="Criptografar mensagem" class="button" />
-      </form>
-
-      <form class="six columns">
-        <label for="md5_encrypted_message">Mensagem criptografada</label>
-        <textarea id="md5_encrypted_message" rows="3"><%= value_for(@algorithm, "md5", @encrypted_message) %></textarea>
-      </form>
-    </div>
+    <%= partial(:form, :locals=> { :algorithm => "md5" }) %>
   </li>
   
   <li class="<%= value_for(@algorithm, "sha1") %>" id="sha1Tab">
@@ -42,19 +30,7 @@
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-    <hr />
-    <div class="row crypt-form">
-      <form accept-charset="UTF-8" action="/sha1/encrypt/" id="sha1_encryption" method="post" class="six columns">
-        <label for="sha1_encryption_message">Mensagem a ser criptografada</label>
-        <input type="text" value="<%= value_for(@algorithm, "sha1", @message) %>" id="sha1_encryption_message" name="sha1_encryption[message]" />
-        <input type="submit" value="Criptografar mensagem" class="button" />
-      </form>
-
-      <form class="six columns">
-        <label for="encrypt_md5">Mensagem criptografada</label>
-        <textarea rows="3"><%= value_for(@algorithm, "sha1", @encrypted_message) %></textarea>
-      </form>
-    </div>
+    <%= partial(:form, :locals=> { :algorithm => "sha1" }) %>
   </li>
 
   <li class="<%= value_for(@algorithm, "sha128") %>" id="sha128Tab">
@@ -63,19 +39,7 @@
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-    <hr />
-    <div class="row crypt-form">
-      <form accept-charset="UTF-8" action="/sha128/encrypt/" id="sha128_encryption" method="post" class="six columns">
-        <label for="sha128_encryption_message">Mensagem a ser criptografada</label>
-        <input type="text" value="<%= value_for(@algorithm, "sha128", @message) %>" id="sha128_encryption_message" name="sha128_encryption[message]" />
-        <input type="submit" value="Criptografar mensagem" class="button" />
-      </form>
-
-      <form class="six columns">
-        <label for="encrypt_md5">Mensagem criptografada</label>
-        <textarea rows="3"><%= value_for(@algorithm, "sha128", @encrypted_message) %></textarea>
-      </form>
-    </div>
+    <%= partial(:form, :locals=> { :algorithm => "sha128" }) %>
   </li>
 
   <li class="<%= value_for(@algorithm, "sha256") %>" id="sha256Tab">
@@ -84,19 +48,7 @@
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-    <hr />
-    <div class="row crypt-form">
-      <form accept-charset="UTF-8" action="/sha256/encrypt/" id="sha256_encryption" method="post" class="six columns">
-        <label for="sha256_encryption_message">Mensagem a ser criptografada</label>
-        <input type="text" value="<%= value_for(@algorithm, "sha256", @message) %>" id="sha256_encryption_message" name="sha256_encryption[message]" />
-        <input type="submit" value="Criptografar mensagem" class="button" />
-      </form>
-
-      <form class="six columns">
-        <label for="encrypt_md5">Mensagem criptografada</label>
-        <textarea rows="3"><%= value_for(@algorithm, "sha256", @encrypted_message) %></textarea>
-      </form>
-    </div>
+    <%= partial(:form, :locals=> { :algorithm => "sha256" }) %>
   </li>
 
   <li class="<%= value_for(@algorithm, "sha384") %>" id="sha384Tab">
@@ -105,19 +57,7 @@
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-    <hr />
-    <div class="row crypt-form">
-      <form accept-charset="UTF-8" action="/sha384/encrypt/" id="sha384_encryption" method="post" class="six columns">
-        <label for="sha384_encryption_message">Mensagem a ser criptografada</label>
-        <input type="text" value="<%= value_for(@algorithm, "sha384", @message) %>" id="sha384_encryption_message" name="sha384_encryption[message]" />
-        <input type="submit" value="Criptografar mensagem" class="button" />
-      </form>
-
-      <form class="six columns">
-        <label for="encrypt_md5">Mensagem criptografada</label>
-        <textarea rows="3"><%= value_for(@algorithm, "sha384", @encrypted_message) %></textarea>
-      </form>
-    </div>
+    <%= partial(:form, :locals=> { :algorithm => "sha384" }) %>
   </li>
 
   <li class="<%= value_for(@algorithm, "sha512") %>" id="sha512Tab">
@@ -126,19 +66,7 @@
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-    <hr />
-    <div class="row crypt-form">
-      <form accept-charset="UTF-8" action="/sha512/encrypt/" id="sha512_encryption" method="post" class="six columns">
-        <label for="sha512_encryption_message">Mensagem a ser criptografada</label>
-        <input type="text" value="<%= value_for(@algorithm, "sha512", @message) %>" id="sha512_encryption_message" name="sha512_encryption[message]" />
-        <input type="submit" value="Criptografar mensagem" class="button" />
-      </form>
-
-      <form class="six columns">
-        <label for="encrypt_md5">Mensagem criptografada</label>
-        <textarea rows="3"><%= value_for(@algorithm, "sha512", @encrypted_message) %></textarea>
-      </form>
-    </div>
+    <%= partial(:form, :locals=> { :algorithm => "sha512" }) %>
   </li>
 
   <li class="<%= value_for(@algorithm, "base64") %>" id="base64Tab">
@@ -147,18 +75,6 @@
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-    <hr />
-    <div class="row crypt-form">
-      <form accept-charset="UTF-8" action="/base64/encrypt/" id="base64_encryption" method="post" class="six columns">
-        <label for="base64_encryption_message">Mensagem a ser criptografada</label>
-        <input type="text" value="<%= value_for(@algorithm, "base64", @message) %>" id="base64_encryption_message" name="base64_encryption[message]" />
-        <input type="submit" value="Criptografar mensagem" class="button" />
-      </form>
-
-      <form class="six columns">
-        <label for="encrypt_md5">Mensagem criptografada</label>
-        <textarea rows="3"><%= value_for(@algorithm, "base64", @encrypted_message) %></textarea>
-      </form>
-    </div>
+    <%= partial(:form, :locals=> { :algorithm => "base64" }) %>
   </li>
 </ul>
