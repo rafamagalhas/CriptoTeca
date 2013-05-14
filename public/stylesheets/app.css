@@ -13,8 +13,6 @@
    Shared Styles
 ----------------------------------------- */
 
-dl.tabs dd a:focus{font-weight:bold;color:#2ba6cb;}
-
 html {
 	overflow-y: scroll;
 }
