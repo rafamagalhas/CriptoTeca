@@ -1,206 +1,164 @@
-<!DOCTYPE html>
+<h2>CriptoTeca</h2>
 
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8" />
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-  <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
-  
-  <title>CriptoTeca</title>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-  <link rel="stylesheet" href="/stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="/stylesheets/app.css">
+<dl class="tabs">
+  <dd class="<%= value_for(@algorithm, "md5")    %>"><a href="#md5">MD5</a></dd>
+  <dd class="<%= value_for(@algorithm, "sha1")   %>"><a href="#sha1">SHA1</a></dd>
+  <dd class="<%= value_for(@algorithm, "sha128") %>"><a href="#sha128">SHA128</a></dd>
+  <dd class="<%= value_for(@algorithm, "sha256") %>"><a href="#sha256">SHA256</a></dd>
+  <dd class="<%= value_for(@algorithm, "sha384") %>"><a href="#sha384">SHA384</a></dd>
+  <dd class="<%= value_for(@algorithm, "sha512") %>"><a href="#sha512">SHA512</a></dd>
+  <dd class="<%= value_for(@algorithm, "base64") %>"><a href="#base64">Base64</a></dd>
+</dl>
 
-  <script src="javascripts/modernizr.foundation.js"></script>
+<ul class="tabs-content">
+  <li class="<%= value_for(@algorithm, "md5") %>" id="md5Tab">
+    <h3>Algoritmo de criptografia MD5</h3>
+    <a href="#">Mais informações</a>
 
-  <!-- IE Fix for HTML5 Tags -->
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-</head>
-<body>
-  <div class="row">
-    <div class="twelve columns" id="content">
-      <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Aprendendo a utilizar o sistema</a>
-        <a href="#">Colabore</a>
-        <a href="#">Sobre o projeto Criptoteca</a>
-      </nav>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    
+    <hr />
+    <div class="row crypt-form">
+      <form accept-charset="UTF-8" action="/md5/encrypt/" id="md5_encryption" method="post" class="six columns">
+        <label for="md5_encryption_message">Mensagem a ser criptografada</label>
+        <input type="text" value="<%= value_for(@algorithm, "md5", @message) %>" id="md5_encryption_message" name="md5_encryption[message]" />
+        <input type="submit" value="Criptografar mensagem" class="button" />
+      </form>
 
-      <h2>CriptoTeca</h2>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      
-      <dl class="tabs">
-        <dd class="<%= value_for(@algorithm, "md5")    %>"><a href="#md5">MD5</a></dd>
-        <dd class="<%= value_for(@algorithm, "sha1")   %>"><a href="#sha1">SHA1</a></dd>
-        <dd class="<%= value_for(@algorithm, "sha128") %>"><a href="#sha128">SHA128</a></dd>
-        <dd class="<%= value_for(@algorithm, "sha256") %>"><a href="#sha256">SHA256</a></dd>
-        <dd class="<%= value_for(@algorithm, "sha384") %>"><a href="#sha384">SHA384</a></dd>
-        <dd class="<%= value_for(@algorithm, "sha512") %>"><a href="#sha512">SHA512</a></dd>
-        <dd class="<%= value_for(@algorithm, "base64") %>"><a href="#base64">Base64</a></dd>
-      </dl>
-      
-      <ul class="tabs-content">
-        <li class="<%= value_for(@algorithm, "md5") %>" id="md5Tab">
-          <h3>Algoritmo de criptografia MD5</h3>
-          <a href="#">Mais informações</a>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          
-          <hr />
-          <div class="row crypt-form">
-            <form accept-charset="UTF-8" action="/md5/encrypt/" id="md5_encryption" method="post" class="six columns">
-              <label for="md5_encryption_message">Mensagem a ser criptografada</label>
-              <input type="text" value="<%= value_for(@algorithm, "md5", @message) %>" id="md5_encryption_message" name="md5_encryption[message]" />
-              <input type="submit" value="Criptografar mensagem" class="button" />
-            </form>
-
-            <form class="six columns">
-              <label for="md5_encrypted_message">Mensagem criptografada</label>
-              <textarea id="md5_encrypted_message" rows="3"><%= value_for(@algorithm, "md5", @encrypted_message) %></textarea>
-            </form>
-          </div>
-        </li>
-        
-        <li class="<%= value_for(@algorithm, "sha1") %>" id="sha1Tab">
-          <h3>Algoritmo de criptografia SHA1</h3>
-          <a href="#">Mais informações</a>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-          <hr />
-          <div class="row crypt-form">
-            <form accept-charset="UTF-8" action="/sha1/encrypt/" id="sha1_encryption" method="post" class="six columns">
-              <label for="sha1_encryption_message">Mensagem a ser criptografada</label>
-              <input type="text" value="<%= value_for(@algorithm, "sha1", @message) %>" id="sha1_encryption_message" name="sha1_encryption[message]" />
-              <input type="submit" value="Criptografar mensagem" class="button" />
-            </form>
-
-            <form class="six columns">
-              <label for="encrypt_md5">Mensagem criptografada</label>
-              <textarea rows="3"><%= value_for(@algorithm, "sha1", @encrypted_message) %></textarea>
-            </form>
-          </div>
-        </li>
-
-        <li class="<%= value_for(@algorithm, "sha128") %>" id="sha128Tab">
-          <h3>Algoritmo de criptografia SHA128</h3>
-          <a href="#">Mais informações</a>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-          <hr />
-          <div class="row crypt-form">
-            <form accept-charset="UTF-8" action="/sha128/encrypt/" id="sha128_encryption" method="post" class="six columns">
-              <label for="sha128_encryption_message">Mensagem a ser criptografada</label>
-              <input type="text" value="<%= value_for(@algorithm, "sha128", @message) %>" id="sha128_encryption_message" name="sha128_encryption[message]" />
-              <input type="submit" value="Criptografar mensagem" class="button" />
-            </form>
-
-            <form class="six columns">
-              <label for="encrypt_md5">Mensagem criptografada</label>
-              <textarea rows="3"><%= value_for(@algorithm, "sha128", @encrypted_message) %></textarea>
-            </form>
-          </div>
-        </li>
-
-        <li class="<%= value_for(@algorithm, "sha256") %>" id="sha256Tab">
-          <h3>Algoritmo de criptografia SHA256</h3>
-          <a href="#">Mais informações</a>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-          <hr />
-          <div class="row crypt-form">
-            <form accept-charset="UTF-8" action="/sha256/encrypt/" id="sha256_encryption" method="post" class="six columns">
-              <label for="sha256_encryption_message">Mensagem a ser criptografada</label>
-              <input type="text" value="<%= value_for(@algorithm, "sha256", @message) %>" id="sha256_encryption_message" name="sha256_encryption[message]" />
-              <input type="submit" value="Criptografar mensagem" class="button" />
-            </form>
-
-            <form class="six columns">
-              <label for="encrypt_md5">Mensagem criptografada</label>
-              <textarea rows="3"><%= value_for(@algorithm, "sha256", @encrypted_message) %></textarea>
-            </form>
-          </div>
-        </li>
-
-        <li class="<%= value_for(@algorithm, "sha384") %>" id="sha384Tab">
-          <h3>Algoritmo de criptografia SHA384</h3>
-          <a href="#">Mais informações</a>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-          <hr />
-          <div class="row crypt-form">
-            <form accept-charset="UTF-8" action="/sha384/encrypt/" id="sha384_encryption" method="post" class="six columns">
-              <label for="sha384_encryption_message">Mensagem a ser criptografada</label>
-              <input type="text" value="<%= value_for(@algorithm, "sha384", @message) %>" id="sha384_encryption_message" name="sha384_encryption[message]" />
-              <input type="submit" value="Criptografar mensagem" class="button" />
-            </form>
-
-            <form class="six columns">
-              <label for="encrypt_md5">Mensagem criptografada</label>
-              <textarea rows="3"><%= value_for(@algorithm, "sha384", @encrypted_message) %></textarea>
-            </form>
-          </div>
-        </li>
-
-        <li class="<%= value_for(@algorithm, "sha512") %>" id="sha512Tab">
-          <h3>Algoritmo de criptografia SHA512</h3>
-          <a href="#">Mais informações</a>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-          <hr />
-          <div class="row crypt-form">
-            <form accept-charset="UTF-8" action="/sha512/encrypt/" id="sha512_encryption" method="post" class="six columns">
-              <label for="sha512_encryption_message">Mensagem a ser criptografada</label>
-              <input type="text" value="<%= value_for(@algorithm, "sha512", @message) %>" id="sha512_encryption_message" name="sha512_encryption[message]" />
-              <input type="submit" value="Criptografar mensagem" class="button" />
-            </form>
-
-            <form class="six columns">
-              <label for="encrypt_md5">Mensagem criptografada</label>
-              <textarea rows="3"><%= value_for(@algorithm, "sha512", @encrypted_message) %></textarea>
-            </form>
-          </div>
-        </li>
-
-        <li class="<%= value_for(@algorithm, "base64") %>" id="base64Tab">
-          <h3>Algoritmo de criptografia Base64</h3>
-          <a href="#">Mais informações</a>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-          <hr />
-          <div class="row crypt-form">
-            <form accept-charset="UTF-8" action="/base64/encrypt/" id="base64_encryption" method="post" class="six columns">
-              <label for="base64_encryption_message">Mensagem a ser criptografada</label>
-              <input type="text" value="<%= value_for(@algorithm, "base64", @message) %>" id="base64_encryption_message" name="base64_encryption[message]" />
-              <input type="submit" value="Criptografar mensagem" class="button" />
-            </form>
-
-            <form class="six columns">
-              <label for="encrypt_md5">Mensagem criptografada</label>
-              <textarea rows="3"><%= value_for(@algorithm, "base64", @encrypted_message) %></textarea>
-            </form>
-          </div>
-        </li>
-      </ul>
+      <form class="six columns">
+        <label for="md5_encrypted_message">Mensagem criptografada</label>
+        <textarea id="md5_encrypted_message" rows="3"><%= value_for(@algorithm, "md5", @encrypted_message) %></textarea>
+      </form>
     </div>
-  </div>
+  </li>
+  
+  <li class="<%= value_for(@algorithm, "sha1") %>" id="sha1Tab">
+    <h3>Algoritmo de criptografia SHA1</h3>
+    <a href="#">Mais informações</a>
 
-  <script src="/javascripts/foundation.min.js"></script>
-  <script src="/javascripts/app.js"></script>
-</body>
-</html>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <hr />
+    <div class="row crypt-form">
+      <form accept-charset="UTF-8" action="/sha1/encrypt/" id="sha1_encryption" method="post" class="six columns">
+        <label for="sha1_encryption_message">Mensagem a ser criptografada</label>
+        <input type="text" value="<%= value_for(@algorithm, "sha1", @message) %>" id="sha1_encryption_message" name="sha1_encryption[message]" />
+        <input type="submit" value="Criptografar mensagem" class="button" />
+      </form>
+
+      <form class="six columns">
+        <label for="encrypt_md5">Mensagem criptografada</label>
+        <textarea rows="3"><%= value_for(@algorithm, "sha1", @encrypted_message) %></textarea>
+      </form>
+    </div>
+  </li>
+
+  <li class="<%= value_for(@algorithm, "sha128") %>" id="sha128Tab">
+    <h3>Algoritmo de criptografia SHA128</h3>
+    <a href="#">Mais informações</a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <hr />
+    <div class="row crypt-form">
+      <form accept-charset="UTF-8" action="/sha128/encrypt/" id="sha128_encryption" method="post" class="six columns">
+        <label for="sha128_encryption_message">Mensagem a ser criptografada</label>
+        <input type="text" value="<%= value_for(@algorithm, "sha128", @message) %>" id="sha128_encryption_message" name="sha128_encryption[message]" />
+        <input type="submit" value="Criptografar mensagem" class="button" />
+      </form>
+
+      <form class="six columns">
+        <label for="encrypt_md5">Mensagem criptografada</label>
+        <textarea rows="3"><%= value_for(@algorithm, "sha128", @encrypted_message) %></textarea>
+      </form>
+    </div>
+  </li>
+
+  <li class="<%= value_for(@algorithm, "sha256") %>" id="sha256Tab">
+    <h3>Algoritmo de criptografia SHA256</h3>
+    <a href="#">Mais informações</a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <hr />
+    <div class="row crypt-form">
+      <form accept-charset="UTF-8" action="/sha256/encrypt/" id="sha256_encryption" method="post" class="six columns">
+        <label for="sha256_encryption_message">Mensagem a ser criptografada</label>
+        <input type="text" value="<%= value_for(@algorithm, "sha256", @message) %>" id="sha256_encryption_message" name="sha256_encryption[message]" />
+        <input type="submit" value="Criptografar mensagem" class="button" />
+      </form>
+
+      <form class="six columns">
+        <label for="encrypt_md5">Mensagem criptografada</label>
+        <textarea rows="3"><%= value_for(@algorithm, "sha256", @encrypted_message) %></textarea>
+      </form>
+    </div>
+  </li>
+
+  <li class="<%= value_for(@algorithm, "sha384") %>" id="sha384Tab">
+    <h3>Algoritmo de criptografia SHA384</h3>
+    <a href="#">Mais informações</a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <hr />
+    <div class="row crypt-form">
+      <form accept-charset="UTF-8" action="/sha384/encrypt/" id="sha384_encryption" method="post" class="six columns">
+        <label for="sha384_encryption_message">Mensagem a ser criptografada</label>
+        <input type="text" value="<%= value_for(@algorithm, "sha384", @message) %>" id="sha384_encryption_message" name="sha384_encryption[message]" />
+        <input type="submit" value="Criptografar mensagem" class="button" />
+      </form>
+
+      <form class="six columns">
+        <label for="encrypt_md5">Mensagem criptografada</label>
+        <textarea rows="3"><%= value_for(@algorithm, "sha384", @encrypted_message) %></textarea>
+      </form>
+    </div>
+  </li>
+
+  <li class="<%= value_for(@algorithm, "sha512") %>" id="sha512Tab">
+    <h3>Algoritmo de criptografia SHA512</h3>
+    <a href="#">Mais informações</a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <hr />
+    <div class="row crypt-form">
+      <form accept-charset="UTF-8" action="/sha512/encrypt/" id="sha512_encryption" method="post" class="six columns">
+        <label for="sha512_encryption_message">Mensagem a ser criptografada</label>
+        <input type="text" value="<%= value_for(@algorithm, "sha512", @message) %>" id="sha512_encryption_message" name="sha512_encryption[message]" />
+        <input type="submit" value="Criptografar mensagem" class="button" />
+      </form>
+
+      <form class="six columns">
+        <label for="encrypt_md5">Mensagem criptografada</label>
+        <textarea rows="3"><%= value_for(@algorithm, "sha512", @encrypted_message) %></textarea>
+      </form>
+    </div>
+  </li>
+
+  <li class="<%= value_for(@algorithm, "base64") %>" id="base64Tab">
+    <h3>Algoritmo de criptografia Base64</h3>
+    <a href="#">Mais informações</a>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <hr />
+    <div class="row crypt-form">
+      <form accept-charset="UTF-8" action="/base64/encrypt/" id="base64_encryption" method="post" class="six columns">
+        <label for="base64_encryption_message">Mensagem a ser criptografada</label>
+        <input type="text" value="<%= value_for(@algorithm, "base64", @message) %>" id="base64_encryption_message" name="base64_encryption[message]" />
+        <input type="submit" value="Criptografar mensagem" class="button" />
+      </form>
+
+      <form class="six columns">
+        <label for="encrypt_md5">Mensagem criptografada</label>
+        <textarea rows="3"><%= value_for(@algorithm, "base64", @encrypted_message) %></textarea>
+      </form>
+    </div>
+  </li>
+</ul>
