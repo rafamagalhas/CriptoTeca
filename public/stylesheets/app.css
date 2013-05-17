@@ -17,6 +17,7 @@ nav a { margin-left: 30px; }
 nav a.active { font-weight: bolder; }
 #content { background: #fff url('../images/logo.png') right 65px no-repeat; }
 h2 { font-weight: lighter; margin: 20px 0; font-size: 48px; }
+.external { padding-right: 15px; background: #fff url("../images/external.png") no-repeat right center; }
 
 /* -----------------------------------------
    Index
