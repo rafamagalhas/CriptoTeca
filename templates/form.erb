@@ -3,7 +3,8 @@
   <form accept-charset="UTF-8" action="/<%= algorithm %>/encrypt/" id="<%= algorithm %>_encryption" method="post" class="six columns">
     <label for="<%= algorithm %>_encryption_message">Mensagem a ser criptografada</label>
     <input type="text" value="<%= value_for(@algorithm, algorithm, @message) %>" id="<%= algorithm %>_encryption_message" name="<%= algorithm %>_encryption[message]" />
-    <input type="submit" value="Criptografar mensagem" class="button" />
+    <input type="submit" value="Criptografar mensagem" class="button radius" />
+    <span class="clear-form <%= algorithm %> button secondary radius">Limpar</span>
   </form>
 
   <form class="six columns">
