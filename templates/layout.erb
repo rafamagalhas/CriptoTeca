@@ -27,10 +27,10 @@
   <div class="row">
     <div class="twelve columns" id="content">
       <nav>
-        <a href="/">Inicio</a>
-        <a href="/how-to-use">Como utilizar</a>
-        <a href="/colaborate">Colabore</a>
-        <a href="/about">Sobre o projeto</a>
+        <a href="/" class="<%= is_active?("") %>">Inicio</a>
+        <a href="/how-to-use" class="<%= is_active?("how-to-use") %>">Como utilizar</a>
+        <a href="/colaborate" class="<%= is_active?("colaborate") %>">Colabore</a>
+        <a href="/about" class="<%= is_active?("about") %>">Sobre o projeto</a>
       </nav>
 
       <%= yield %>

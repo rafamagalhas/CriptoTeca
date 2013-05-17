@@ -49,3 +49,8 @@ private
 def value_for(algorithm, current, value = "active")
   return value if algorithm == current
 end
+
+def is_active?(page)
+  return "active" if page == request.path_info.split("/").last || page.empty?
+  return ""
+end
