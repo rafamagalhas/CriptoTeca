@@ -34,6 +34,11 @@ class TestCases < Test::Unit::TestCase
     assert_equal("VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZw==", crypto.encrypt("The quick brown fox jumps over the lazy dog"))
   end
 
+  def test_decrypt_base64
+    crypto = Crypto.new("base64")
+    assert_equal("1234567890abc", crypto.decrypt("MTIzNDU2Nzg5MGFiYw=="))
+  end
+
   def test_encrypt_cryptograph_non_supported
     crypto = Crypto.new("md4")
     assert_equal("Criptografia não suportada", crypto.encrypt("MD4 TEST"))

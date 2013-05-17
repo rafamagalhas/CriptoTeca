@@ -21,4 +21,11 @@ class Crypto
       else "Criptografia não suportada"
     end
   end
+
+  def decrypt(message)
+    return case type
+      when "base64" then Base64.decode64(message).chomp
+      else "Criptografia não suportada"
+    end
+  end
 end
