@@ -1,9 +1,20 @@
 <h2>CriptoTeca</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Criptografia é o ato de codificar dados em informações aparentemente sem sentido, para que pessoas não consigam ter acesso às informações que foram cifradas. Há vários usos para a criptografia em nosso dia-a-dia: proteger documentos, transmitir informações confidenciais pela Internet ou por uma rede local, etc.</p>
 
-<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>A técnica usada na criptografia envolve métodos matemáticos de combinatória para a geração de informações extremamente seguras e praticamente inacessíveis por terceiros, pois:</p>
 
+<ul>
+  <li>uma chave de 2 bits terá 4 combinações possíveis;</li>
+  <li>uma chave de 4 bits terá 16 combinações possíveis;</li>
+  <li>uma chave de 8 bits terá 65.356 combinações possíveis;</li>
+  <li>uma chave de 32 bits terá 4 milhões combinações possíveis;</li>
+</ul>
+
+<p>Pesquisas estimam que para alguém conseguir quebrar uma criptografia usando chaves de 64 bits na base da tentativa e erro, levaria cerca de 100.000 anos usando um PC comum.</p>
+
+<!-- <h3>Teste alguns algoritmos</h3> -->
+ 
 <dl class="tabs">
   <dd class="<%= value_for(@algorithm, "md5")    %>"><a href="#md5">MD5</a></dd>
   <dd class="<%= value_for(@algorithm, "sha1")   %>"><a href="#sha1">SHA1</a></dd>
@@ -18,7 +29,7 @@
     <h3>Algoritmo de criptografia MD5</h3>
     <a href="https://en.wikipedia.org/wiki/md5" target="blank" class="external">Mais informações</a>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>MD5 ou Message-Digest Algorithm 5 é uma técnica de criptografia padrão na Internet e amplamente utilizada em aplicações de segurança e para a verificação da integridade de ficheiros. O MD5 nada mais é do que uma função hash com um valor de 128 bits projetada por Ronald Rivest.</p>
     
     <%= partial(:form, :locals => { :algorithm => "md5" }) %>
   </li>
@@ -27,7 +38,7 @@
     <a href="https://en.wikipedia.org/wiki/Sha1" target="blank" class="external">Mais informações</a>
     <h3>Algoritmo de criptografia Sha1</h3>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>SHA1 é uma função hash de mão única praticamente semelhante ao MD5, mas que se diferencia por utilizar uma chave de 160 bits, o que acaba criando uma string resultante maior que 40 caracteres alfa-numéricos, que diminui a probabilidade de ocorrência de uma colisão, ou seja, encontrar duas strings que codificadas sejam a mesma coisa, quando comparada com uma chave de 128 bits gerada pelo MD5.</p>
 
     <%= partial(:form, :locals => { :algorithm => "sha1" }) %>
   </li>
@@ -36,7 +47,7 @@
     <h3>Algoritmo de criptografia SHA256</h3>
     <a href="https://en.wikipedia.org/wiki/Sha2" target="blank" class="external">Mais informações</a>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>SHA256 ou <em>Secure Hash Algorithm</em> é uma função hash que transforma um conjunto de dados em um único valor de comprimento fixo, denominado de hash. O valor hash calculado pode então ser usado para verificar a integridade de cópias dos dados originais. Esta irreversibilidade significa que um valor de hash pode ser livremente distribuído para fins comparativos.</p>
 
     <%= partial(:form, :locals => { :algorithm => "sha256" }) %>
   </li>
@@ -45,7 +56,7 @@
     <h3>Algoritmo de criptografia SHA384</h3>
     <a href="https://en.wikipedia.org/wiki/Sha2" target="blank" class="external">Mais informações</a>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>SHA384 ou <em>Secure Hash Algorithm</em> é uma função hash que transforma um conjunto de dados em um único valor de comprimento fixo, denominado de hash. O valor hash calculado pode então ser usado para verificar a integridade de cópias dos dados originais. Esta irreversibilidade significa que um valor de hash pode ser livremente distribuído para fins comparativos.</p>
 
     <%= partial(:form, :locals => { :algorithm => "sha384" }) %>
   </li>
@@ -54,7 +65,7 @@
     <h3>Algoritmo de criptografia SHA512</h3>
     <a href="https://en.wikipedia.org/wiki/Sha2" target="blank" class="external">Mais informações</a>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>SHA512 ou <em>Secure Hash Algorithm</em> é uma função hash que transforma um conjunto de dados em um único valor de comprimento fixo, denominado de hash. O valor hash calculado pode então ser usado para verificar a integridade de cópias dos dados originais. Esta irreversibilidade significa que um valor de hash pode ser livremente distribuído para fins comparativos.</p>
 
     <%= partial(:form, :locals => { :algorithm => "sha512" }) %>
   </li>
@@ -63,7 +74,7 @@
     <h3>Algoritmo de criptografia Base64</h3>
     <a href="https://en.wikipedia.org/wiki/Base64" target="blank" class="external">Mais informações</a>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>BASE64 é uma função hash para codificação de dados amplamente utilizado para transferência de dados na Internet. Isto se deve ao fato de que o algoritmo BASE64 é um método de codificação de mão dupla, onde através de uma segunda função é possível descobrir a string original de uma string codificada.</p>
 
     <%= partial(:form, :locals => { :algorithm => "base64" }) %>
   </li>
