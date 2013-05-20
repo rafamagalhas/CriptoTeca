@@ -24,7 +24,7 @@
     // $('.block-grid.five-up>li:nth-child(5n+1)').css({clear: 'left'});
 
 		/* Custom JS */
-		
+
 		// TODO: Refactor the clear-form functions
 		$(".clear-form.md5").click(function(){$("#md5_encryption_message").val("");$("#md5_encrypted_message").val("");$("#md5_encryption_message").focus();});
     $(".clear-form.sha1").click(function(){$("#sha1_encryption_message").val("");$("#sha1_encrypted_message").val("");$("#sha1_encryption_message").focus();});

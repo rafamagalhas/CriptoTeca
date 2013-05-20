@@ -1,14 +1,14 @@
 <hr />
 <div class="row crypt-form">
   <form accept-charset="UTF-8" action="/<%= algorithm %>/encrypt/" id="<%= algorithm %>_encryption" method="post" class="six columns">
-    <label for="<%= algorithm %>_encryption_message">Mensagem a ser criptografada</label>
+    <label for="<%= algorithm %>_encryption_message"><%= form_input_message(algorithm) %></label>
     <input type="text" value="<%= value_for(@algorithm, algorithm, @message) %>" id="<%= algorithm %>_encryption_message" name="<%= algorithm %>_encryption[message]" />
-    <input type="submit" value="Criptografar mensagem" class="button radius" />
+    <input type="submit" value="<%= form_button_message(algorithm) %>" class="button radius" />
     <span class="clear-form <%= algorithm %> button secondary radius">Limpar</span>
   </form>
 
   <form class="six columns">
-    <label for="<%= algorithm %>_encrypted_message">Mensagem criptografada</label>
+    <label for="<%= algorithm %>_encrypted_message"><%= form_output_message(algorithm) %></label>
     <textarea id="<%= algorithm %>_encrypted_message" rows="3"><%= value_for(@algorithm, algorithm, @encrypted_message) %></textarea>
   </form>
 </div>

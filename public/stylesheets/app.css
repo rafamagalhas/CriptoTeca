@@ -24,7 +24,7 @@ h3 { font-weight: lighter; }
    Index
 ----------------------------------------- */
 
-.tabs { margin-top: 25px; }
+.tabs { margin-top: 60px; }
 .tabs-content h3 { float: left; }
 .tabs-content a { margin-top: 23px; float: right; }
 .tabs-content p { clear: both; margin-top: 25px; }

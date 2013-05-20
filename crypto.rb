@@ -5,7 +5,7 @@ require 'base64'
 
 class Crypto
   attr_accessor :type
-  
+
   def initialize(type)
     @type = type
   end
@@ -18,14 +18,14 @@ class Crypto
       when "sha384" then (Digest::SHA384.new << message).hexdigest
       when "sha512" then (Digest::SHA512.new << message).hexdigest
       when "base64" then Base64.encode64(message).chomp
-      else "Criptografia não suportada"
+      else "Criptografia ou encoding não suportado"
     end
   end
 
   def decrypt(message)
     return case type
       when "base64" then Base64.decode64(message).chomp
-      else "Criptografia não suportada"
+      else "Criptografia ou encoding não suportado"
     end
   end
 end

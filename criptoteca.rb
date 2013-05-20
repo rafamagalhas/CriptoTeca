@@ -51,6 +51,21 @@ def value_for(algorithm, current, value = "active")
 end
 
 def is_active?(page)
-  return "active" if page == request.path_info.split("/").last || page.empty?
+  return "active" if page == request.path
   return ""
+end
+
+def form_input_message(algorithm)
+  return "Mensagem a ser codificada" if algorithm == "base64"
+  "Mensagem a ser criptografada"
+end
+
+def form_output_message(algorithm)
+  return "Mensagem codificada" if algorithm == "base64"
+  "Mensagem criptografada"
+end
+
+def form_button_message(algorithm)
+  return "Codificar mensagem" if algorithm == "base64"
+  "Criptografar mensagem"
 end

@@ -41,6 +41,6 @@ class TestCases < Test::Unit::TestCase
 
   def test_encrypt_cryptograph_non_supported
     crypto = Crypto.new("md4")
-    assert_equal("Criptografia não suportada", crypto.encrypt("MD4 TEST"))
+    assert_equal("Criptografia ou encoding não suportado", crypto.encrypt("MD4 TEST"))
   end
 end
