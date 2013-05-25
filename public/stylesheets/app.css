@@ -5,6 +5,7 @@
 -----------------------------------------------------
 :: Shared Styles
 :: Index
+:: How to use
 */
 
 /* -----------------------------------------
@@ -19,6 +20,7 @@ nav a.active { font-weight: bolder; }
 h2 { font-weight: lighter; margin: 20px 0; font-size: 48px; }
 h3 { font-weight: lighter; }
 .external { padding-right: 15px; background: #fff url("../images/external.png") no-repeat right center; }
+.container { margin-bottom: 150px; }
 
 /* -----------------------------------------
    Index
@@ -30,3 +32,23 @@ h3 { font-weight: lighter; }
 .tabs-content p { clear: both; margin-top: 25px; }
 .crypt-form textarea { height: 80px; }
 .clear-form { margin-left: 8px; }
+/*h3 { text-decoration: underline; }*/
+h3 { border-bottom: 1px solid #000; padding-bottom: 5px; }
+
+/* -----------------------------------------
+   How to use
+----------------------------------------- */
+
+.docs { margin-top: 45px; }
+.docs p { float: left; color: red; }
+.docs img { float: right; }
+.step { text-align: center; }
+hr.separator {
+  height: 1px;
+  margin: 70px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.3), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.3), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.3), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.3), rgba(0,0,0,0));
+  border: 0;
+}
