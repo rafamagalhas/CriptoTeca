@@ -2,6 +2,8 @@
 
 require "test/unit"
 require "../crypto"
+require 'coveralls'
+Coveralls.wear!
 
 class TestCases < Test::Unit::TestCase
   def test_encrypt_md5
