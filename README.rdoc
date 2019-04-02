@@ -1,5 +1,0 @@
-[![Ebert](https://ebertapp.io/github/rafamagalhas/CriptoTeca.svg)](https://ebertapp.io/github/rafamagalhas/CriptoTeca)
-
-== CriptoTeca
-
-Basic sinatra application.
